@@ -1,6 +1,6 @@
-# Odoo Combat 2024
+# Odoo Combat
 
-Welcome to the Odoo Combat 2024! This repository contains the solution for the hackathon conducted on [Date], where we address the problem statements provided by the organizers.
+Welcome to the Odoo Combat! This repository contains the solution for the hackathon conducted on 29-6-2024, where we address the problem statements provided by the organizers.
 
 
 ## Team Members
