@@ -27,5 +27,5 @@ The problem statements will be declared on the day of the hackathon. Once provid
 
 ## Contributors
 <a href="https://github.com/smit-joshi814/odoo-combat-2024/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=smit-joshi814/odoo-combat-2024" />
+  <img src="https://contrib.rocks/image?repo=smit-joshi814/odoo-combat-2024&max=4" />
 </a>
