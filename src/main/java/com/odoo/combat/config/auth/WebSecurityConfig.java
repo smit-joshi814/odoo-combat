@@ -109,7 +109,7 @@ public class WebSecurityConfig {
 		http.authorizeHttpRequests((requests) -> requests
 				.dispatcherTypeMatchers(DispatcherType.FORWARD, DispatcherType.ERROR).permitAll()
 				.requestMatchers("/api/**").denyAll()
-				.requestMatchers("/home","/index.jsp","/sign-in.jsp","/sign-up/**","/sign-up.jsp")
+				.requestMatchers("/sign-in.jsp","/sign-up/**","/sign-up.jsp")
 				.permitAll()
 				.anyRequest()
 				.authenticated())

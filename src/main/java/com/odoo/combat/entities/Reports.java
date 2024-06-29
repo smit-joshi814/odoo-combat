@@ -26,6 +26,7 @@ public class Reports {
 	private Integer reportId;
 	private String description;
 	private String photoURL;
+	
 	private String location;
 	
 	@ManyToOne

@@ -40,11 +40,11 @@ public class ApiAuthController {
 	public ResponseEntity<AuthResponse> authenticateUser(@RequestBody AuthRequest authRequest) {
 
 		Authentication authentication = authenticationManager
-				.authenticate(new UsernamePasswordAuthenticationToken(authRequest.username(), authRequest.password()));
+				.authenticate(new UsernamePasswordAuthenticationToken(authRequest.email(), authRequest.password()));
 
 		SecurityContextHolder.getContext().setAuthentication(authentication);
 
-		UserDetails userDetails = userDetailsService.loadUserByUsername(authRequest.username());
+		UserDetails userDetails = userDetailsService.loadUserByUsername(authRequest.email());
 
 		String token = jwtHelper.generateToken(userDetails);
 
@@ -54,10 +54,11 @@ public class ApiAuthController {
 	@PostMapping("/signup")
 	public ResponseEntity<AuthResponse> registerUser(@RequestBody SignUpRequest signUpRequest) {
 
-		userService.createUser(
-				Users.builder().email(signUpRequest.username()).password(signUpRequest.password()).build());
+		userService.createUser(Users.builder().email(signUpRequest.email()).password(signUpRequest.password())
+				.name(signUpRequest.name()).phoneNumber(signUpRequest.phoneNumber()).role(signUpRequest.role())
+				.build());
 
-		UserDetails userDetails = userDetailsService.loadUserByUsername(signUpRequest.username());
+		UserDetails userDetails = userDetailsService.loadUserByUsername(signUpRequest.email());
 
 		String token = jwtHelper.generateToken(userDetails);
 
