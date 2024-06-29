@@ -2,6 +2,11 @@
 
 Welcome to the Odoo Combat! This repository contains the solution for the hackathon conducted on 29-6-2024, where we address the problem statements provided by the organizers.
 
+## Live URL
+**[See Here](https://odoo-combat-latest.onrender.com)**
+
+## Application Repositoty
+- **[APP REPO](https://github.com/tejasvmodi/oddo_combat)**
 
 ## Team Members
 
@@ -12,16 +17,16 @@ Welcome to the Odoo Combat! This repository contains the solution for the hackat
 
 ## Problem Statement
 
-The problem statements will be declared on the day of the hackathon. Once provided, they will be included here.
+Tackling Public Litter: Application for Efficient Garbage Management : Creating a full stack application for efficient garbage management to tackle public litter can significantly improve urban cleanliness and resource management
 
 ## Solution Overview
+By implementing this full-stack application, cities can significantly enhance their garbage management processes, leading to cleaner and healthier urban environments.
 
-(Provide a brief overview of the solution you have developed. This section will be updated once the problem statements are declared and the solution is implemented.)
 
 ## Technical Stack
 
-- **Programming Languages**: Java
-- **Framework**: Spring Boot, Spring Security
+- **Programming Languages**: Java, Dart
+- **Framework**: Spring Boot, Spring Security, Data JPA, Flutter
 - **Database**: MySQL
 - **Tools**: Git, Docker
 
