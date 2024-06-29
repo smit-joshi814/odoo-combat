@@ -21,9 +21,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       # Store sensitive information as secrets
-      SPRING_DATASOURCE_URL: ${{ secrets.DB_URL }}
-      SPRING_DATASOURCE_USERNAME: ${{ secrets.DB_USERNAME }}
-      SPRING_DATASOURCE_PASSWORD: ${{ secrets.DB_PASSWORD }}
+      SPRING_DATASOURCE_URL: ${{ secrets.SPRING_DATASOURCE_URL }}
+      SPRING_DATASOURCE_USERNAME: ${{ secrets.SPRING_DATASOURCE_USERNAME }}
+      SPRING_DATASOURCE_PASSWORD: ${{ secrets.SPRING_DATASOURCE_PASSWORD }}
       IMGKIT_API_PUBLIC: ${{secrets.IMGKIT_API_PUBLIC}}
       IMGKIT_API_PRIVATE: ${{secrets.IMGKIT_API_PRIVATE}}
       IMGKIT_API_ENDPOINT: ${{secrets.IMGKIT_API_ENDPOINT}}
