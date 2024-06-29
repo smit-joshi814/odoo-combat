@@ -17,11 +17,11 @@ Welcome to the Odoo Combat! This repository contains the solution for the hackat
 
 ## Problem Statement
 
-The problem statements will be declared on the day of the hackathon. Once provided, they will be included here.
+Tackling Public Litter: Application for Efficient Garbage Management : Creating a full stack application for efficient garbage management to tackle public litter can significantly improve urban cleanliness and resource management
 
 ## Solution Overview
+By implementing this full-stack application, cities can significantly enhance their garbage management processes, leading to cleaner and healthier urban environments.
 
-(Provide a brief overview of the solution you have developed. This section will be updated once the problem statements are declared and the solution is implemented.)
 
 ## Technical Stack
 
