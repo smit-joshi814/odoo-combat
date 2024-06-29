@@ -8,6 +8,6 @@ import com.odoo.combat.entities.Users;
 
 public interface UserRepository extends JpaRepository<Users, Long> {
 
-	Optional<Users> findByUsername(String username);
+	Optional<Users> findByEmail(String username);
 
 }

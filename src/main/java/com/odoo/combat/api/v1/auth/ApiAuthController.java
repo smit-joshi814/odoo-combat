@@ -55,7 +55,7 @@ public class ApiAuthController {
 	public ResponseEntity<AuthResponse> registerUser(@RequestBody SignUpRequest signUpRequest) {
 
 		userService.createUser(
-				Users.builder().username(signUpRequest.username()).password(signUpRequest.password()).build());
+				Users.builder().email(signUpRequest.username()).password(signUpRequest.password()).build());
 
 		UserDetails userDetails = userDetailsService.loadUserByUsername(signUpRequest.username());
 

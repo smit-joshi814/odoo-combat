@@ -5,38 +5,32 @@ import java.time.LocalDateTime;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import com.odoo.combat.entities.constants.UserRoles;
+import com.odoo.combat.entities.constants.ReportStatus;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Users {
+public class Reports {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long userId;
+	private Integer reportId;
+	private String description;
+	private String photoURL;
+	private String location;
 	
-	private String name;
-
-	private String email;
-
-	private String password;
-	
-	private String phoneNumber;
-
-	private Boolean status;
-
-	private UserRoles role;
+	@ManyToOne
+	private Users user;
+	private ReportStatus status;
 
 	@CreationTimestamp
 	private LocalDateTime createdAt;
