@@ -2,6 +2,9 @@
 
 Welcome to the Odoo Combat! This repository contains the solution for the hackathon conducted on 29-6-2024, where we address the problem statements provided by the organizers.
 
+## Live URL
+**[See Here](https://odoo-combat-latest.onrender.com)**
+
 ## Application Repositoty
 - **[APP REPO](https://github.com/tejasvmodi/oddo_combat)**
 
