@@ -22,8 +22,8 @@ The problem statements will be declared on the day of the hackathon. Once provid
 
 ## Technical Stack
 
-- **Programming Languages**: Java
-- **Framework**: Spring Boot, Spring Security
+- **Programming Languages**: Java, Dart
+- **Framework**: Spring Boot, Spring Security, Data JPA, Flutter
 - **Database**: MySQL
 - **Tools**: Git, Docker
 
