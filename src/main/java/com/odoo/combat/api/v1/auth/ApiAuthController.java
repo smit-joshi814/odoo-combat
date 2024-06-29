@@ -48,21 +48,23 @@ public class ApiAuthController {
 
 		String token = jwtHelper.generateToken(userDetails);
 
-		return ResponseEntity.ok(new AuthResponse(token, jwtHelper.getExpirationDateFromToken(token)));
+		Users u = userService.getUser(authRequest.email());
+		return ResponseEntity.ok(new AuthResponse(token, jwtHelper.getExpirationDateFromToken(token),u.getRole().toString()));
 	}
 
 	@PostMapping("/signup")
 	public ResponseEntity<AuthResponse> registerUser(@RequestBody SignUpRequest signUpRequest) {
 
-		userService.createUser(Users.builder().email(signUpRequest.email()).password(signUpRequest.password())
+		if(userService.createUser(Users.builder().email(signUpRequest.email()).password(signUpRequest.password())
 				.name(signUpRequest.name()).phoneNumber(signUpRequest.phoneNumber()).role(signUpRequest.role())
-				.build());
+				.build()) == null)
+		 		    return new ResponseEntity<>(HttpStatus.ALREADY_REPORTED);
 
 		UserDetails userDetails = userDetailsService.loadUserByUsername(signUpRequest.email());
 
 		String token = jwtHelper.generateToken(userDetails);
 
-		return ResponseEntity.ok(new AuthResponse(token, jwtHelper.getExpirationDateFromToken(token)));
+		return ResponseEntity.ok(new AuthResponse(token, jwtHelper.getExpirationDateFromToken(token),""));
 	}
 
 	@GetMapping("/login")
