@@ -2,6 +2,8 @@ package com.odoo.combat.services;
 
 import java.util.List;
 
+import org.springframework.web.multipart.MultipartFile;
+
 import com.odoo.combat.entities.Reports;
 import com.odoo.combat.entities.Users;
 import com.odoo.combat.entities.constants.ReportStatus;
@@ -12,7 +14,7 @@ public interface ReportsService {
 
     Reports getReportById(Integer reportId);
 
-    Reports createReport(Reports report);
+    Reports createReport(Reports report,MultipartFile image);
 
     Reports updateReport(Reports report);
 
